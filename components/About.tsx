@@ -18,7 +18,7 @@ export function About() {
 
           <p>
             My work includes embedded projects, drone tracking research, PCB design,
-            accelerator science experience, among various other experiences.
+            accelerator science experience, among various other work.
           </p>
         </ScrollReveal>
 
