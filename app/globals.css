@@ -638,7 +638,7 @@ main > section:not(:first-child)::before {
 .timeline-date {
   color: var(--accent);
   font-family: var(--mono);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 600;
   letter-spacing: 0.045em;
 }
@@ -725,6 +725,57 @@ main > section:not(:first-child)::before {
     0 0 22px rgba(104, 183, 255, 0.45);
 }
 
+.timeline-item-compact {
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 1.25rem;
+  padding: 1.15rem 1.25rem;
+  border-radius: 1rem;
+  background: rgba(11, 22, 38, 0.62);
+  box-shadow: none;
+}
+
+.timeline-item-compact::before {
+  top: 1.55rem;
+}
+
+.timeline-item-compact .timeline-date {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.timeline-item-compact .timeline-body h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.2rem;
+}
+
+.timeline-item-compact .timeline-org {
+  font-size: 0.9rem;
+}
+
+.timeline-item-compact .timeline-title-row > span {
+  font-size: 0.75rem;
+}
+
+.timeline-item-compact .experience-description {
+  margin: 0.65rem 0 0.75rem;
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+.timeline-item-compact .experience-bullets {
+  margin: 0.75rem 0 0.85rem;
+  gap: 0.35rem;
+}
+
+.timeline-item-compact .experience-bullets li {
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+.timeline-item-compact .tag {
+  font-size: 0.68rem;
+  padding: 0.3rem 0.52rem;
+}
+
 .experience-bullets {
   display: grid;
   gap: 0.55rem;
@@ -741,6 +792,13 @@ main > section:not(:first-child)::before {
 
 .experience-bullets li::marker {
   color: var(--accent);
+}
+
+.experience-description {
+  margin: 0.85rem 0 0.95rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
 }
 
 /* CONTACT */
@@ -904,6 +962,21 @@ main > section:not(:first-child)::before {
     margin-top: 0.35rem;
     text-align: left;
   }
+
+    .timeline-item-compact {
+    grid-template-columns: 1fr;
+    padding: 1.1rem 1.2rem;
+  }
+
+  .timeline-item-compact .timeline-title-row {
+    display: block;
+  }
+
+  .timeline-item-compact .timeline-title-row > span {
+    display: block;
+    margin-top: 0.3rem;
+    text-align: left;
+  }
 }
 
 @media (max-width: 780px) {
@@ -980,7 +1053,7 @@ main > section:not(:first-child)::before {
   }
 
   .timeline-date {
-    font-size: 0.82rem;
+    font-size: 0.92rem;
   }
 
   .timeline-body h3 {
@@ -989,6 +1062,26 @@ main > section:not(:first-child)::before {
 
   .timeline-org {
     font-size: 0.96rem;
+  }
+
+  .timeline-item-compact {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+    .timeline-item-compact {
+    grid-template-columns: 1fr;
+    padding: 1.1rem 1.2rem;
+  }
+
+  .timeline-item-compact .timeline-title-row {
+    display: block;
+  }
+
+  .timeline-item-compact .timeline-title-row > span {
+    display: block;
+    margin-top: 0.3rem;
+    text-align: left;
   }
 
   .experience-bullets li {

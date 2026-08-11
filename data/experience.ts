@@ -4,23 +4,48 @@ export type Experience = {
   organisationUrl?: string;
   date: string;
   location: string;
-  bullets: string[];
+  bullets?: string[];
+  description?: string;
   tags: string[];
+  compact?: boolean;
 };
 
 export const experiences: Experience[] = [
+  {
+    role: "IoT Systems Developer",
+    organisation: "Kaizen Radical",
+    organisationUrl: "https://www.eng.mcmaster.ca/",
+    date: "July 2026 — Present",
+    location: "Quebec, Canada",
+    bullets: [
+      "Building IoT-connected visual management stations that turn physical controls like buttons, toggles, and indicators into real-time digital events.",
+      "Writing firmware to read hardware inputs, send updates over Wi-Fi to Odoo, and reflect ERP status changes through local feedback devices.",
+    ],
+    tags: ["Microcontrollers", "Firmware", "Odoo"],
+  },
   {
     role: "Research Assistant",
     organisation: "ETF Lab · Faculty of Engineering, McMaster University",
     organisationUrl: "https://www.eng.mcmaster.ca/",
     date: "May 2026 — Present",
-    location: "Hamilton, ON, Canada",
+    location: "Hamilton, Ontario, Canada",
     bullets: [
-      "Developing MATLAB algorithms to validate radar-based UAV tracking simulations against real-world flight data.",
-      "Performing error analysis and parameter tuning to enhance simulation fidelity.",
-      "Using these high-fidelity datasets to support future ML-based autonomous drone detection and tracking.",
+      "Built MATLAB pipelines to convert simulated radar detections into reconstructed UAV trajectories and compare them against simulator ground truth.",
+      "Tested constant-velocity and constant-acceleration Kalman filters to study how different tracking models respond to manoeuvring drone motion.",
+      "Extended the project into a public UAV manoeuvre-classification pipeline using tracker-derived motion features and grouped machine-learning eva",
     ],
-    tags: ["MATLAB", "RADAR", "UAV Tracking"],
+    tags: ["MATLAB", "Radar Tracking", "Kalman Filtering"],
+  },
+  {
+    role: "Embedded Computer Vision Intern",
+    organisation: "Confidential Early-Stage Venture",
+    date: "April 2026 — July 2026",
+    location: "Arlington, Virginia, USA",
+    bullets: [
+      "Worked on edge-based object detection modules that connected YOLO/OpenCV vision software with embedded hardware for real-time inference.",
+      "Used Roboflow to prepare custom datasets, train detection models, and improve performance under on-device compute and latency constraints.",
+    ],
+    tags: ["Python", "YOLO", "NVIDIA Jetson"],
   },
   {
     role: "Sustainability Research Intern",
@@ -28,11 +53,9 @@ export const experiences: Experience[] = [
     organisationUrl: "https://www.ngfeurope.com/",
     date: "August 2024",
     location: "Liverpool, United Kingdom",
-    bullets: [
-      "Interviewed executives across key departments to evaluate automation opportunities in the glass manufacturing process.",
-      "Analysed batch production workflows and identified areas for operational and sustainability improvement.",
-      "Presented findings and my recommendations to the executive project team.",
-    ],
+    compact: true,
+    description:
+      "Analysed manufacturing workflows and interviewed cross-functional executives to identify opportunities in automation, energy efficiency, waste reduction, and sustainability, producing and presenting a research report.",
     tags: ["Automation", "Manufacturing", "Sustainability"],
   },
   {
@@ -41,12 +64,10 @@ export const experiences: Experience[] = [
     organisationUrl: "https://www.ukri.org/councils/stfc/",
     date: "July — August 2024",
     location: "Warrington, United Kingdom",
-    bullets: [
-      "Supported routine inspection and maintenance on the CLARA and VELA particle accelerators.",
-      "Prepared and verified vacuum chambers seals and joints utilised in RF dipole crab cavities, ensuring compliance for installation at the Large Hadron Collider (LHC).",
-      "Utilised Molflow and Opera2D to simulate accelerator vacuum and magnetic-field conditions.",
-    ],
-    tags: ["RF Systems", "Vacuum Systems", "Molflow"],
+    compact: true,
+    description:
+      "Supported accelerator and vacuum-system work for the CLARA and the LHC (Large Hadron Collider), while using Molflow and Opera2D to simulate beamline vacuum conditions and magnetic fields.",
+    tags: ["RF Systems", "Vacuum Systems", "Simulations"],
   },
   {
     role: "Systems Engineering Intern",
@@ -54,10 +75,9 @@ export const experiences: Experience[] = [
     organisationUrl:"https://www.arm.com/",
     date: "May 2024",
     location: "Manchester, United Kingdom",
-    bullets: [
-      "Programmed ARM Cortex‑M4 microcontrollers to collect re‑entry telemetry during satellite drop tests.",
-      "Developed collision-warning logic and radio-link protocols to coordinate prototypes across multiple teams.",
-    ],
+    compact: true,
+    description:
+      "Programmed Arm-based microcontrollers for satellite telemetry, radio communication, and collision-warning prototypes tested across multiple teams.",
     tags: ["ARM Cortex-M4", "Embedded C", "Telemetry"],
   },
   {
@@ -66,10 +86,9 @@ export const experiences: Experience[] = [
     organisationUrl:"https://www.siemens.com/en-gb/",
     date: "February 2024",
     location: "Manchester, United Kingdom",
-    bullets: [
-      "Modelled and calibrated digital twins for electromechanical systems using Siemens Simcenter.",
-      "Proposed automation and digital-twin technologies to resolve customer complaints for a smart-hotel retrofit project under budget constraints.",
-    ],
+    compact: true,
+    description:
+      "Modelled and calibrated electromechanical digital twins in Siemens Simcenter and applied simulation-led design to a smart-building retrofit project.",
     tags: ["Digital Twins", "Siemens Simcenter", "Automation"],
   },
 ];

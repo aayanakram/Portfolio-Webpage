@@ -11,7 +11,11 @@ export function ExperienceTimeline() {
       />
       <div className="timeline">
         {experiences.map((item, index) => (
-          <ScrollReveal className="timeline-item" delay={index * 0.05} key={`${item.role}-${item.organisation}`}>
+          <ScrollReveal
+            className={`timeline-item ${item.compact ? "timeline-item-compact" : ""}`}
+            delay={index * 0.05}
+            key={`${item.role}-${item.organisation}`}
+          >
             <div className="timeline-date">{item.date}</div>
             <div className="timeline-body">
             <div className="timeline-title-row">
@@ -34,11 +38,15 @@ export function ExperienceTimeline() {
 
               <span>{item.location}</span>
             </div>
-              <ul className="experience-bullets">
-                {item.bullets.map((bullet) => (
-                  <li key={bullet}>{bullet}</li>
-                ))}
-              </ul>
+              {item.description ? (
+                <p className="experience-description">{item.description}</p>
+              ) : item.bullets ? (
+                <ul className="experience-bullets">
+                  {item.bullets.map((bullet) => (
+                    <li key={bullet}>{bullet}</li>
+                  ))}
+                </ul>
+              ) : null}
               <div className="tag-row">
                 {item.tags.map((tag) => (
                   <span className="tag" key={tag}>

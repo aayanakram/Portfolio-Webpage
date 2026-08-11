@@ -45,6 +45,34 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "drone-tracking-research",
+    title: "Drone Tracking Research",
+    kicker: "Radar processing · tracking · machine learning",
+    category: "Autonomous Systems",
+    status: "Completed",
+    timeframe: "2025",
+    summary:
+      "Built a simulation-based UAV radar tracking pipeline combining radar measurement processing, spherical-to-Cartesian reconstruction, CV/CA Kalman filtering, temporal feature engineering, and Random Forest manoeuvre classification. The final corrected experiment achieved 80.58% grouped cross-validation accuracy across 35 simulated trials and 7 motion classes.",
+    problem:
+      "Reliable UAV tracking requires robust sensor fusion, trajectory estimation, and manoeuvre classification to distinguish real targets from clutter and maintain accuracy across motion patterns.",
+    approach:
+      "Developed a simulation-based pipeline for radar measurement processing, coordinate reconstruction, CV/CA Kalman filtering, temporal feature extraction, and Random Forest manoeuvre classification.",
+    impact:
+      "The research produced an experimental tracking workflow with improved classification accuracy and helped validate radar-based target tracking strategies for small UAV applications.",
+    tags: ["MATLAB", "Python", "Kalman Filtering", "Radar Tracking"],
+    highlights: [
+      "Implemented spherical-to-Cartesian reconstruction and adaptive Kalman filtering for UAV motion tracking.",
+      "Engineered temporal features and used Random Forest classification to distinguish seven motion classes.",
+      "Validated the pipeline across 35 simulated trials with grouped cross-validation.",
+    ],
+    nextSteps: [
+      "Extend the pipeline to real-world radar data and on-board processing.",
+      "Refine manoeuvre classification and state estimation under noise.",
+      "Integrate the tracker with a UAV autonomy demo or visualization tool.",
+    ],
+    githubUrl: "https://github.com/aayanakram/DroneTrackingResearch",
+  },
+  {
     slug: "stm32-flight-controller",
     title: "STM32-Based Flight Controller",
     kicker: "Firmware · PCB · embedded control",
