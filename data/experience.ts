@@ -32,7 +32,7 @@ export const experiences: Experience[] = [
     bullets: [
       "Built MATLAB pipelines to convert simulated radar detections into reconstructed UAV trajectories and compare them against simulator ground truth.",
       "Tested constant-velocity and constant-acceleration Kalman filters to study how different tracking models respond to manoeuvring drone motion.",
-      "Extended the project into a public UAV manoeuvre-classification pipeline using tracker-derived motion features and grouped machine-learning eva",
+      "Extended the project into a public UAV manoeuvre-classification pipeline using tracker-derived motion features and grouped machine-learning evaluation.",
     ],
     tags: ["MATLAB", "Radar Tracking", "Kalman Filtering"],
   },
