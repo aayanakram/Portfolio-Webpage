@@ -14,7 +14,7 @@ export const experiences: Experience[] = [
   {
     role: "IoT Systems Developer",
     organisation: "Kaizen Radical",
-    organisationUrl: "https://www.eng.mcmaster.ca/",
+    organisationUrl: "https://kaizenradical.com/?lang=en",
     date: "July 2026 — Present",
     location: "Quebec, Canada",
     bullets: [
