@@ -66,7 +66,7 @@ export const experiences: Experience[] = [
     location: "Warrington, United Kingdom",
     compact: true,
     description:
-      "Supported accelerator and vacuum-system work for the CLARA and the LHC (Large Hadron Collider), while using Molflow and Opera2D to simulate beamline vacuum conditions and magnetic fields.",
+      "Supported accelerator and vacuum-system work around CLARA and LHC-related research infrastructure, while using Molflow and Opera2D to explore beamline vacuum conditions and magnetic fields.",
     tags: ["RF Systems", "Vacuum Systems", "Simulations"],
   },
   {

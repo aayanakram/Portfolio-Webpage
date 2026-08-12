@@ -25,7 +25,7 @@ export const projects: Project[] = [
     status: "In development",
     timeframe: "2026",
     summary:
-      "A 10-inch, heavy-lift multirotor featuring a 4.8:1 thrust-to-weight ratio. I utilised ArduPilot dynamic notch filtering to minimise mechanical resonance, allowing an onboard Raspberry Pi to autonomously detect targets in real time. To secure BVLOS operations, I integrated a dual-band ELRS GeminiX system and isolated the GNSS/magnetometer to minimise EMI.",
+      "Designing a 10-inch heavy-lift multirotor with a 4.8:1 thrust-to-weight ratio, built around ArduPilot, MAVLink companion computing, GPS navigation, and onboard computer vision. The system focuses on stable power, vibration control, resilient ELRS communication, and modular payload support for search-and-rescue workflows.",
     problem:
       "Small UAV platforms are useful for search, inspection, and field robotics, but reliable autonomy requires the airframe, power system, RF link, sensors, and compute stack to be designed as one integrated system.",
     approach:
@@ -107,7 +107,7 @@ export const projects: Project[] = [
     status: "Prototype",
     timeframe: "2026",
     summary:
-      "Developing a SAR-focused perception module for UAV operations, combining lightweight onboard compute with a YOLOv8-based human detection pipeline. The system is designed to process camera input on a Raspberry Pi, support real-time target identification, and integrate with future autonomous search-and-rescue flight workflows.",
+      "Developing a UAV search-and-rescue perception module using a YOLOv8-based human detection pipeline on Raspberry Pi. The system is designed for real-time camera processing, target identification, and future integration with autonomous mission workflows.",
     problem:
       "In a rescue setting, aerial imagery is only useful if it can be processed quickly enough to help operators identify people or regions of interest.",
     approach:
@@ -124,6 +124,34 @@ export const projects: Project[] = [
       "Collect a more diverse image dataset for field-like conditions.",
       "Benchmark model speed on Raspberry Pi or similar edge hardware.",
       "Connect detections to mapping, logging, or ground-station display.",
+    ],
+  },
+  {
+    slug: "glxy-news",
+    title: "GLXY News",
+    kicker: "Full-stack web · editorial workflow",
+    category: "Software Systems",
+    status: "Live project",
+    timeframe: "2026",
+    liveUrl: "https://glxy-news.vercel.app/",
+    summary:
+      "Built a full-stack publishing workflow for a mobile esports news platform with protected staff authentication, editorial review, and publishing controls. Structured the Supabase/PostgreSQL backend around games, staff roles, post statuses, and RLS permissions.",
+    problem:
+      "Community news teams need a lightweight publishing workflow that separates drafts, review, and published content without forcing everything through generic social media posts.",
+    approach:
+      "I built a Next.js and Supabase-backed site with game-specific pages, newsroom access, staff roles, draft management, review queues, and a publishing flow for articles.",
+    impact:
+      "The project demonstrates practical product thinking: authentication, database-backed content, editorial permissions, UI polish, deployment, and iteration from user feedback.",
+    tags: ["Next.js", "Supabase", "Auth", "Vercel"],
+    highlights: [
+      "Created sections for CODM, R6M, and Valorant Mobile coverage.",
+      "Built staff-facing newsroom flows for drafts, review, editing, and publishing.",
+      "Deployed the platform on Vercel and iterated on mobile navigation, validation, and layout issues.",
+    ],
+    nextSteps: [
+      "Add article templates for transfers, interviews, and tournament reports.",
+      "Improve editor dashboards and publication analytics.",
+      "Explore automated Discord posting after publication.",
     ],
   },
   {
@@ -151,34 +179,6 @@ export const projects: Project[] = [
       "Add clearer test points and debugging indicators.",
       "Document the truth tables and control-signal mapping.",
       "Expand the design toward a small educational CPU-style datapath.",
-    ],
-  },
-  {
-    slug: "glxy-news",
-    title: "GLXY News",
-    kicker: "Full-stack web · editorial workflow",
-    category: "Software Systems",
-    status: "Live project",
-    timeframe: "2026",
-    liveUrl: "https://glxy-news.vercel.app/",
-    summary:
-      "Built a full-stack publishing workflow for a mobile esports news platform with protected staff authentication, role-based permissions, draft creation, editorial review, and publishing controls. Structured the Supabase/PostgreSQL backend around games, sections, staff profiles, post statuses, and RLS policies for writer, editor, and admin access.",
-    problem:
-      "Community news teams need a lightweight publishing workflow that separates drafts, review, and published content without forcing everything through generic social media posts.",
-    approach:
-      "I built a Next.js and Supabase-backed site with game-specific pages, newsroom access, staff roles, draft management, review queues, and a publishing flow for articles.",
-    impact:
-      "The project demonstrates practical product thinking: authentication, database-backed content, editorial permissions, UI polish, deployment, and iteration from user feedback.",
-    tags: ["Next.js", "Supabase", "Auth", "Vercel"],
-    highlights: [
-      "Created sections for CODM, R6M, and Valorant Mobile coverage.",
-      "Built staff-facing newsroom flows for drafts, review, editing, and publishing.",
-      "Deployed the platform on Vercel and iterated on mobile navigation, validation, and layout issues.",
-    ],
-    nextSteps: [
-      "Add article templates for transfers, interviews, and tournament reports.",
-      "Improve editor dashboards and publication analytics.",
-      "Explore automated Discord posting after publication.",
     ],
   },
 ];
