@@ -19,20 +19,20 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "autonomous-uav",
-    title: "Autonomous 10-Inch UAV System",
+    title: "Autonomous Search-and-Rescue UAV",
     kicker: "Flight platform · autonomy · edge compute",
     category: "Autonomous Systems",
     status: "In development",
     timeframe: "2026",
     summary:
-      "Designing a 10-inch heavy-lift multirotor with a 4.8:1 thrust-to-weight ratio, built around ArduPilot, MAVLink companion computing, GPS navigation, and onboard computer vision. The system focuses on stable power, vibration control, resilient ELRS communication, and modular payload support for search-and-rescue workflows.",
+      "Engineered a 6S, 10-inch autonomous UAV integrating ArduPilot flight control, GPS navigation, long-range telemetry, and NVIDIA Jetson companion computing. Developed an onboard YOLO human-detection pipeline using PyTorch and OpenCV, optimised with TensorRT and integrated over MAVLink to transmit validated detection alerts to the ground station.",
     problem:
       "Small UAV platforms are useful for search, inspection, and field robotics, but reliable autonomy requires the airframe, power system, RF link, sensors, and compute stack to be designed as one integrated system.",
     approach:
       "The build focuses on a 6S propulsion architecture, ArduPilot-compatible flight control, ExpressLRS communication, GPS/compass integration, and a companion-computer path for perception and mission logic.",
     impact:
       "The project gives me a full-stack UAV testbed for learning flight dynamics, embedded integration, telemetry, power budgeting, vibration control, and practical autonomy.",
-    tags: ["ArduPilot", "MAVLink", "UAV", "ExpressLRS"],
+    tags: ["ArduPilot", "MAVLink", "NVIDIA Jetson", "TensorRT"],
     highlights: [
       "Designed the platform around a 10-inch frame, 6S battery system, and high-torque motor/propeller combination.",
       "Planned a companion-computer layer for computer vision and high-level mission logic over MAVLink.",
@@ -46,20 +46,20 @@ export const projects: Project[] = [
   },
   {
     slug: "drone-tracking-research",
-    title: "Drone Tracking Research",
+    title: "UAV Radar Tracking & Classification",
     kicker: "Radar processing · tracking · machine learning",
     category: "Autonomous Systems",
     status: "Completed",
     timeframe: "2025",
     summary:
-      "Built a simulation-based UAV radar tracking pipeline combining radar measurement processing, spherical-to-Cartesian reconstruction, CV/CA Kalman filtering, temporal feature engineering, and Random Forest manoeuvre classification. The final corrected experiment achieved 80.58% grouped cross-validation accuracy across 35 simulated trials and 7 motion classes.",
+      "Developed a MATLAB radar-processing pipeline to reconstruct UAV trajectories from simulated detections and benchmark Constant-Velocity and Constant-Acceleration Kalman filters against ground truth. Built a 35-trial, seven-class manoeuvre dataset with 29 radar- and tracker-derived motion features, achieving 80.6% accuracy and 0.81 macro-F1 with a tuned random forest.",
     problem:
       "Reliable UAV tracking requires robust sensor fusion, trajectory estimation, and manoeuvre classification to distinguish real targets from clutter and maintain accuracy across motion patterns.",
     approach:
       "Developed a simulation-based pipeline for radar measurement processing, coordinate reconstruction, CV/CA Kalman filtering, temporal feature extraction, and Random Forest manoeuvre classification.",
     impact:
       "The research produced an experimental tracking workflow with improved classification accuracy and helped validate radar-based target tracking strategies for small UAV applications.",
-    tags: ["MATLAB", "Python", "Kalman Filtering", "Radar Tracking"],
+    tags: ["MATLAB", "Radar", "Kalman Filtering", "Machine Learning"],
     highlights: [
       "Implemented spherical-to-Cartesian reconstruction and adaptive Kalman filtering for UAV motion tracking.",
       "Engineered temporal features and used Random Forest classification to distinguish seven motion classes.",
@@ -80,14 +80,14 @@ export const projects: Project[] = [
     status: "Design project",
     timeframe: "2026",
     summary:
-      "Designing an STM32F405-based custom flight controller in Altium, with emphasis on reliable power delivery, signal integrity, and EMI reduction. The design includes a switching buck converter for the 5V rail, a low-noise 3.3V regulator for sensors, TVS input protection, external crystal oscillator support, and local decoupling for stable embedded operation.",
+      "Designed, assembled, and brought up a custom STM32F405 flight controller, completing schematic capture and PCB layout in Altium with integrated power regulation, IMU/GPS interfaces, SWD, and motor outputs. Developed real-time C/C++ firmware using FreeRTOS, interrupts, and DMA for sensor acquisition, attitude estimation, telemetry, failsafes, and closed-loop PID control.",
     problem:
       "Flight control depends on reliable timing, clean sensor interfaces, robust firmware structure, and hardware that can tolerate noisy electromechanical environments.",
     approach:
       "The project focuses on STM32 peripheral integration, PCB planning, IMU communication, UART/SPI/I2C buses, and firmware architecture for future control and logging.",
     impact:
       "It strengthens the embedded foundation behind UAV systems instead of only treating flight controllers as black-box modules.",
-    tags: ["STM32", "Embedded C", "PCB Design", "Firmware Design"],
+    tags: ["STM32", "Embedded C/C++", "FreeRTOS", "Altium Designer"],
     highlights: [
       "Mapped out firmware responsibilities across sensing, communication, timing, and actuator control.",
       "Explored how hardware layout and firmware structure affect debugging and reliability.",
@@ -101,20 +101,20 @@ export const projects: Project[] = [
   },
   {
     slug: "sar-human-detection",
-    title: "SAR Human Detection Module",
+    title: "Industrial IoT Visual Management System",
     kicker: "Computer vision · rescue workflow",
     category: "Perception",
     status: "Prototype",
     timeframe: "2026",
     summary:
-      "Developing a UAV search-and-rescue perception module using a YOLOv8-based human detection pipeline on Raspberry Pi. The system is designed for real-time camera processing, target identification, and future integration with autonomous mission workflows.",
+      "Developed ESP32-S3 firmware in C++/FreeRTOS for modular IoT visual-management stations integrating digital and analog controls, rotary encoders, indicators, and persistent device state. Engineered bidirectional MQTT/TLS communication with Odoo ERP, including offline event buffering, automatic recovery, telemetry, watchdogs, OTA updates, and multi-device synchronisation.",
     problem:
       "In a rescue setting, aerial imagery is only useful if it can be processed quickly enough to help operators identify people or regions of interest.",
     approach:
       "The module uses a computer-vision pipeline built around image preprocessing, model inference, confidence filtering, and deployment constraints for compact hardware.",
     impact:
       "It connects ML-based perception with real embedded constraints such as latency, camera quality, compute budget, and mission-level integration.",
-    tags: ["Python", "YOLOv8", "Raspberry Pi", "Roboflow"],
+    tags: ["ESP32", "C++", "FreeRTOS", "MQTT", "IoT"],
     highlights: [
       "Structured the project around a practical UAV search-and-rescue use case.",
       "Explored detection confidence, false positives, and environmental variability.",
@@ -135,14 +135,14 @@ export const projects: Project[] = [
     timeframe: "2026",
     liveUrl: "https://glxy-news.vercel.app/",
     summary:
-      "Built a full-stack publishing workflow for a mobile esports news platform with protected staff authentication, editorial review, and publishing controls. Structured the Supabase/PostgreSQL backend around games, staff roles, post statuses, and RLS permissions.",
+      "Built a full-stack publishing platform for mobile esports using Next.js, React, Supabase, and PostgreSQL. Implemented role-based newsroom workflows, protected authentication, Draft → Review → Published state management, game-specific content architecture, and row-level security for editorial access control.",
     problem:
       "Community news teams need a lightweight publishing workflow that separates drafts, review, and published content without forcing everything through generic social media posts.",
     approach:
       "I built a Next.js and Supabase-backed site with game-specific pages, newsroom access, staff roles, draft management, review queues, and a publishing flow for articles.",
     impact:
       "The project demonstrates practical product thinking: authentication, database-backed content, editorial permissions, UI polish, deployment, and iteration from user feedback.",
-    tags: ["Next.js", "Supabase", "Auth", "Vercel"],
+    tags: ["Next.js", "Supabase", "PostgreSQL", "RBAC"],
     highlights: [
       "Created sections for CODM, R6M, and Valorant Mobile coverage.",
       "Built staff-facing newsroom flows for drafts, review, editing, and publishing.",
@@ -155,21 +155,21 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "discrete-logic-alu",
-    title: "4-Bit Discrete Logic ALU",
+    slug: "discrete-logic-adder",
+    title: "4-Bit Discrete Ripple-Carry Adder",
     kicker: "Digital logic · hardware fundamentals",
     category: "Digital Systems",
     status: "Hardware project",
     timeframe: "2026",
     summary:
-      "Built a 4-bit ripple-carry adder from discrete 74-series ICs, cascading half/full-adder bit-slices to propagate carry from LSB to MSB. Verified outputs with an Arduino that sampled GPIO states and used C++ bit manipulation to decode the parallel results in real time.",
+      "Built a 4-bit ripple-carry adder from discrete 74-series logic ICs by cascading half- and full-adder bit slices from LSB to MSB. Verified hardware outputs using an Arduino to sample parallel GPIO states and C++ bit manipulation to decode and validate arithmetic results in real time.",
     problem:
       "Digital logic can feel abstract until timing, wiring, fan-out, signal levels, and physical debugging become part of the design process.",
     approach:
-      "The ALU implements core arithmetic and bitwise operations using discrete logic, with attention to how control signals and data paths map onto actual hardware.",
+      "The adder implements core arithmetic operations using discrete logic, with attention to how control signals and data paths map onto actual hardware.",
     impact:
       "The project provides a concrete foundation for understanding processors, datapaths, FPGA design, and the hardware beneath embedded systems.",
-    tags: ["Digital Logic", "Logic Gates", "74-Series ICs", "Breadboarding"],
+    tags: ["Digital Logic", "74-Series ICs", "C++", "Hardware Verification"],
     highlights: [
       "Implemented addition, subtraction, AND, OR, and XOR style operation paths.",
       "Focused on clean signal routing and understandable hardware documentation.",

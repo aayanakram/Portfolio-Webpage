@@ -11,30 +11,30 @@ export type Experience = {
 };
 
 export const experiences: Experience[] = [
-  {
-    role: "IoT Systems Developer",
-    organisation: "Kaizen Radical",
-    organisationUrl: "https://kaizenradical.com/?lang=en",
-    date: "July 2026 — Present",
-    location: "Quebec, Canada",
-    bullets: [
-      "Building IoT-connected visual management stations that turn physical controls like buttons, toggles, and indicators into real-time digital events.",
-      "Writing firmware to read hardware inputs, send updates over Wi-Fi to Odoo, and reflect ERP status changes through local feedback devices.",
-    ],
-    tags: ["Microcontrollers", "Firmware", "Odoo"],
-  },
-  {
-    role: "Research Assistant",
+    {
+    role: "Research Assistant – UAV Radar Signal Processing & ML",
     organisation: "ETF Lab · Faculty of Engineering, McMaster University",
     organisationUrl: "https://www.eng.mcmaster.ca/",
     date: "May 2026 — Present",
     location: "Hamilton, Ontario, Canada",
     bullets: [
-      "Built MATLAB pipelines to convert simulated radar detections into reconstructed UAV trajectories and compare them against simulator ground truth.",
-      "Tested constant-velocity and constant-acceleration Kalman filters to study how different tracking models respond to manoeuvring drone motion.",
-      "Extended the project into a public UAV manoeuvre-classification pipeline using tracker-derived motion features and grouped machine-learning evaluation.",
+      "Developed MATLAB radar-processing pipelines to reconstruct UAV trajectories from simulated detections and benchmark Constant-Velocity and Constant-Acceleration Kalman filters against ground truth",
+      "Built a reproducible 35-trial dataset across seven UAV maneuver classes, engineering 29 radar- and tracker-derived temporal motion features",
+      "Trained and evaluated classifiers using leakage-safe Leave-One-Trial-Out cross-validation, achieving 80.6% accuracy and 0.81 macro-F1 with a tuned random forest",
     ],
-    tags: ["MATLAB", "Radar Tracking", "Kalman Filtering"],
+    tags: ["MATLAB", "Kalman Filtering", "Machine Learning", "Radar"],
+  },
+  {
+    role: "Embedded Systems & IoT Developer",
+    organisation: "Kaizen Radical",
+    organisationUrl: "https://kaizenradical.com/?lang=en",
+    date: "July 2026 — September 2026",
+    location: "Quebec, Canada",
+    bullets: [
+      "Developed ESP32-S3 firmware in C++/FreeRTOS for event-driven visual-management stations integrating digital and analog controls, rotary encoders, indicators, and persistent device state",
+      "Engineered bidirectional MQTT/TLS communication with Odoo ERP, including offline event buffering, automatic recovery, telemetry, watchdogs, OTA updates, and multi-device synchronisation",
+    ],
+    tags: ["ESP32-S3", "C++", "FreeRTOS", "MQTT", "Odoo"],
   },
   {
     role: "Embedded Computer Vision Intern",
@@ -42,13 +42,13 @@ export const experiences: Experience[] = [
     date: "April 2026 — July 2026",
     location: "Arlington, Virginia, USA",
     bullets: [
-      "Worked on edge-based object detection modules that connected YOLO/OpenCV vision software with embedded hardware for real-time inference.",
-      "Used Roboflow to prepare custom datasets, train detection models, and improve performance under on-device compute and latency constraints.",
+      "Developed and deployed custom YOLO object-detection pipelines on NVIDIA Jetson hardware using Python, PyTorch, and OpenCV, enabling real-time inference across two mobile embedded prototypes",
+      "Built and trained custom datasets in Roboflow, iterating on model and deployment parameters for compute- and latency-constrained edge inference ahead of broader autonomy-stack integration",
     ],
-    tags: ["Python", "YOLO", "NVIDIA Jetson"],
+    tags: ["NVIDIA Jetson", "PyTorch", "OpenCV", "YOLOv8", "Edge AI"],
   },
   {
-    role: "Sustainability Research Intern",
+    role: "Automation & Sustainability Research Intern",
     organisation: "NGF Europe",
     organisationUrl: "https://www.ngfeurope.com/",
     date: "August 2024",
