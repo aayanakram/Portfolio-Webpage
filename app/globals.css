@@ -1,19 +1,19 @@
 :root {
-  --bg: #07111f;
-  --bg-2: #0b1628;
-  --panel: rgba(12, 23, 38, 0.84);
-  --panel-solid: #0e1b2d;
-  --panel-strong: #13243a;
-  --border: rgba(126, 176, 255, 0.16);
-  --border-strong: rgba(126, 176, 255, 0.32);
-  --text: #edf6ff;
-  --muted: #8ba5c2;
-  --dim: #58708f;
-  --accent: #68b7ff;
-  --accent-2: #7b6cff;
-  --accent-soft: rgba(104, 183, 255, 0.13);
-  --green: #79e6b4;
-  --shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+  --bg: #f8f7f3;
+  --bg-2: #f0f1e9;
+  --panel: rgba(246, 247, 239, 0.84);
+  --panel-solid: #f5f5ed;
+  --panel-strong: #e9ede2;
+  --border: rgba(74, 98, 70, 0.16);
+  --border-strong: rgba(74, 98, 70, 0.32);
+  --text: #252c28;
+  --muted: #565e57;
+  --dim: #687068;
+  --accent: #365b45;
+  --accent-2: #4e6546;
+  --accent-soft: rgba(54, 91, 69, 0.13);
+  --green: #42684c;
+  --shadow: 0 24px 80px rgba(40, 55, 42, 0.06);
   --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --serif: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -33,9 +33,9 @@ html {
 body {
   min-height: 100vh;
   background:
-    radial-gradient(circle at 20% 0%, rgba(104, 183, 255, 0.11), transparent 28rem),
-    radial-gradient(circle at 90% 20%, rgba(123, 108, 255, 0.1), transparent 26rem),
-    linear-gradient(180deg, var(--bg), #050b14 100%);
+    radial-gradient(circle at 20% 0%, rgba(54, 91, 69, 0.11), transparent 28rem),
+    radial-gradient(circle at 90% 20%, rgba(78, 101, 70, 0.1), transparent 26rem),
+    linear-gradient(180deg, var(--bg), #f5f4ee 100%);
   color: var(--text);
   font-family: var(--sans);
   line-height: 1.6;
@@ -68,8 +68,8 @@ main,
   z-index: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(126, 176, 255, 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(126, 176, 255, 0.055) 1px, transparent 1px);
+    linear-gradient(rgba(74, 98, 70, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(74, 98, 70, 0.055) 1px, transparent 1px);
   background-size: 44px 44px;
   mask-image: linear-gradient(to bottom, black, transparent 85%);
 }
@@ -106,7 +106,7 @@ main,
   top: 0;
   z-index: 30;
   border-bottom: 1px solid var(--border);
-  background: rgba(7, 17, 31, 0.76);
+  background: rgba(248, 247, 243, 0.94);
   backdrop-filter: blur(18px);
 }
 
@@ -204,8 +204,8 @@ main > section:not(:first-child)::before {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(126, 176, 255, 0.42),
-    rgba(126, 176, 255, 0.42),
+    rgba(74, 98, 70, 0.42),
+    rgba(74, 98, 70, 0.42),
     transparent
   );
 }
@@ -243,7 +243,7 @@ main > section:not(:first-child)::before {
 }
 
 .hero-title span {
-  background: linear-gradient(135deg, #68b7ff, #7b6cff, #b14cff);
+  background: linear-gradient(135deg, #365b45, #4e6546, #647643);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -251,7 +251,7 @@ main > section:not(:first-child)::before {
 
 .hero-summary {
   max-width: 720px;
-  color: #d9e8f8;
+  color: #3e4840;
   font-size: clamp(1.35rem, 2.1vw, 1.9rem);
   font-weight: 600;
   line-height: 1.35;
@@ -318,7 +318,7 @@ main > section:not(:first-child)::before {
 .button-primary {
   border-color: transparent;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: #06101d;
+  color: #ffffff;
 }
 
 .button-secondary {
@@ -339,7 +339,7 @@ main > section:not(:first-child)::before {
 .skill-card,
 .case-study {
   border: 1px solid var(--border);
-  background: linear-gradient(180deg, rgba(18, 36, 58, 0.9), rgba(10, 20, 34, 0.9));
+  background: linear-gradient(180deg, rgba(248, 249, 242, 0.9), rgba(237, 241, 230, 0.9));
   box-shadow: var(--shadow);
 }
 
@@ -369,7 +369,7 @@ main > section:not(:first-child)::before {
 .scanline {
   position: absolute;
   inset: 0;
-  background: linear-gradient(transparent 50%, rgba(104, 183, 255, 0.04) 51%);
+  background: linear-gradient(transparent 50%, rgba(54, 91, 69, 0.04) 51%);
   background-size: 100% 8px;
   opacity: 0.38;
   pointer-events: none;
@@ -386,7 +386,7 @@ main > section:not(:first-child)::before {
   display: grid;
   gap: 0.15rem;
   padding: 1rem;
-  border: 1px solid rgba(126, 176, 255, 0.12);
+  border: 1px solid rgba(74, 98, 70, 0.12);
   border-radius: 1rem;
   background: rgba(255, 255, 255, 0.025);
 }
@@ -415,10 +415,10 @@ main > section:not(:first-child)::before {
 .tag {
   display: inline-flex;
   align-items: center;
-  border: 1px solid rgba(126, 176, 255, 0.3);
+  border: 1px solid rgba(74, 98, 70, 0.3);
   border-radius: 999px;
-  background: rgba(104, 183, 255, 0.1);
-  color: #d6ecff;
+  background: rgba(54, 91, 69, 0.1);
+  color: #36553e;
   font-family: var(--sans);
   font-size: 0.82rem;
   font-weight: 550;
@@ -485,9 +485,9 @@ main > section:not(:first-child)::before {
 }
 
 .principles-card {
-  border: 1px solid rgba(126, 176, 255, 0.18);
+  border: 1px solid rgba(74, 98, 70, 0.18);
   border-radius: 1.2rem;
-  background: rgba(13, 28, 48, 0.76);
+  background: rgba(240, 243, 233, 0.9);
   padding: 1.5rem;
   transform: translateY(-1.5rem);
 }
@@ -515,15 +515,15 @@ main > section:not(:first-child)::before {
   justify-content: space-between;
   border-radius: 1rem;
   padding: 1.25rem;
-  border: 1px solid rgba(126, 176, 255, 0.14);
-  background: rgba(11, 22, 38, 0.72);
+  border: 1px solid rgba(74, 98, 70, 0.14);
+  background: rgba(249, 250, 244, 0.92);
   box-shadow: none;
   transition: border-color 180ms ease, background 180ms ease;
 }
 
 .project-card:hover {
-  border-color: rgba(104, 183, 255, 0.3);
-  background: rgba(14, 28, 48, 0.82);
+  border-color: rgba(54, 91, 69, 0.3);
+  background: rgba(238, 243, 230, 0.96);
 }
 
 .project-card-main h3 {
@@ -587,11 +587,11 @@ main > section:not(:first-child)::before {
 }
 
 .project-link-pill {
-  border: 1px solid rgba(126, 176, 255, 0.22);
+  border: 1px solid rgba(74, 98, 70, 0.22);
   border-radius: 999px;
   padding: 0.28rem 0.55rem;
-  color: #d6ecff;
-  background: rgba(104, 183, 255, 0.08);
+  color: #36553e;
+  background: rgba(54, 91, 69, 0.08);
   font-family: var(--mono);
   font-size: 0.62rem;
   font-weight: 600;
@@ -599,8 +599,8 @@ main > section:not(:first-child)::before {
 }
 
 .project-link-pill:hover {
-  border-color: rgba(104, 183, 255, 0.6);
-  background: rgba(104, 183, 255, 0.16);
+  border-color: rgba(54, 91, 69, 0.6);
+  background: rgba(54, 91, 69, 0.16);
   color: var(--text);
 }
 
@@ -611,9 +611,9 @@ main > section:not(:first-child)::before {
 }
 
 .tag {
-  border: 1px solid rgba(126, 176, 255, 0.22);
-  background: rgba(104, 183, 255, 0.075);
-  color: #c6def8;
+  border: 1px solid rgba(74, 98, 70, 0.22);
+  background: rgba(54, 91, 69, 0.075);
+  color: #465e47;
   font-family: var(--sans);
   font-size: 0.78rem;
   font-weight: 500;
@@ -660,12 +660,12 @@ main > section:not(:first-child)::before {
 .timeline-org {
   display: inline-block;
   width: fit-content;
-  color: #c7dcf5 !important;
+  color: #365b45 !important;
   font-size: 1.02rem;
   font-weight: 450;
   line-height: 1.35;
   text-decoration: underline;
-  text-decoration-color: rgba(104, 183, 255, 0.38);
+  text-decoration-color: rgba(54, 91, 69, 0.38);
   text-underline-offset: 0.22rem;
   transition: color 180ms ease, text-decoration-color 180ms ease;
 }
@@ -676,7 +676,7 @@ main > section:not(:first-child)::before {
 }
 
 .timeline-title-row > span {
-  color: #8ea9c7;
+  color: #646e63;
   font-family: var(--mono);
   font-size: 0.88rem;
   font-weight: 500;
@@ -699,12 +699,12 @@ main > section:not(:first-child)::before {
   width: 2px;
   background: linear-gradient(
     180deg,
-    rgba(104, 183, 255, 0.06),
-    rgba(104, 183, 255, 0.55),
-    rgba(123, 108, 255, 0.45),
-    rgba(104, 183, 255, 0.06)
+    rgba(54, 91, 69, 0.06),
+    rgba(54, 91, 69, 0.55),
+    rgba(78, 101, 70, 0.45),
+    rgba(54, 91, 69, 0.06)
   );
-  box-shadow: 0 0 18px rgba(104, 183, 255, 0.18);
+  box-shadow: 0 0 18px rgba(54, 91, 69, 0.18);
 }
 
 .timeline-item {
@@ -721,8 +721,8 @@ main > section:not(:first-child)::before {
   border-radius: 999px;
   background: var(--accent);
   box-shadow:
-    0 0 0 5px rgba(104, 183, 255, 0.12),
-    0 0 22px rgba(104, 183, 255, 0.45);
+    0 0 0 5px rgba(54, 91, 69, 0.12),
+    0 0 22px rgba(54, 91, 69, 0.45);
 }
 
 .timeline-item-compact {
@@ -730,7 +730,7 @@ main > section:not(:first-child)::before {
   gap: 1.25rem;
   padding: 1.15rem 1.25rem;
   border-radius: 1rem;
-  background: rgba(11, 22, 38, 0.62);
+  background: rgba(249, 250, 244, 0.92);
   box-shadow: none;
 }
 
@@ -1130,4 +1130,157 @@ main > section:not(:first-child)::before {
     font-size: 0.96rem;
     line-height: 1.75;
   }
+}
+/* Ivory and forest-green palette, with the original layout and typography. */
+body,
+.nav-shell {
+  background: var(--bg);
+}
+.background-grid,
+.orb,
+.scanline {
+  background: none;
+}
+.hero-title span {
+  background: none;
+  color: var(--accent);
+}
+.button-primary {
+  background: var(--accent);
+}
+.status-card,
+.principles-card,
+.project-card,
+.timeline-item,
+.skill-card,
+.case-study {
+  background: #f4f5ef;
+  box-shadow: none;
+}
+.project-card:hover {
+  background: #eef1e8;
+}
+.timeline::before {
+  background: #a5b39b;
+  box-shadow: none;
+}
+.timeline-item::before {
+  box-shadow: 0 0 0 5px #e6eadf;
+}
+
+/* Keep the vertical divider from the preferred preview. */
+.status-card.compact-profile-card {
+  padding: 0 0 0 1.5rem;
+  border: 0;
+  border-left: 2px solid #a5b39b;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.status-card .focus-stack {
+  gap: 0.35rem 0.85rem;
+}
+.status-card .focus-stack span {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: var(--dim);
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+.status-card .focus-stack span:not(:last-child)::after {
+  content: "/";
+  padding-left: 0.85rem;
+  color: #a0a69a;
+}
+
+
+/* Compact experience cards: dates above skills, skills level with the first bullet. */
+.timeline-item.experience-card {
+  grid-template-columns: 210px minmax(0, 1fr);
+  column-gap: 1.5rem;
+  row-gap: 0.8rem;
+  padding: 1.2rem 1.35rem;
+  align-items: start;
+}
+.experience-card .timeline-date { grid-column: 1; grid-row: 1; font-size: 0.86rem; line-height: 1.5; }
+.experience-card .experience-heading { grid-column: 2; grid-row: 1; }
+.experience-card .timeline-skills { grid-column: 1; grid-row: 2; align-content: start; padding-top: 0.12rem; }
+.experience-card .experience-details { grid-column: 2; grid-row: 2; min-width: 0; }
+.experience-card .timeline-body h3 { font-size: 1.13rem; line-height: 1.35; margin-bottom: 0.3rem; }
+.experience-card .timeline-org { font-size: 0.9rem; }
+.experience-card .timeline-title-row > span { font-size: 0.73rem; }
+.experience-card .tag { font-size: 0.7rem; padding: 0.32rem 0.5rem; }
+.experience-card .experience-bullets { margin: 0; gap: 0.35rem; }
+.experience-card .experience-bullets li { font-size: 0.9rem; line-height: 1.55; }
+.experience-card .experience-description { margin: 0; }
+.experience-card::before { top: 1.55rem; }
+.hero-socials .icon-button { width: 2.65rem; height: 2.65rem; }
+.hero-socials .icon-button svg { width: 1.55rem; height: 1.55rem; }
+.hero-socials .email-icon-button svg { width: 2.1rem; height: 2.1rem; }
+@media (max-width: 900px) {
+  .timeline-item.experience-card { grid-template-columns: 1fr; gap: 0.75rem; padding: 1.1rem 1.2rem; }
+  .experience-card .timeline-date,
+  .experience-card .experience-heading,
+  .experience-card .timeline-skills,
+  .experience-card .experience-details { grid-column: 1; grid-row: auto; }
+  .experience-card .timeline-skills { padding-top: 0; }
+}
+
+
+/* Earlier, short-term roles use a quieter, more compact treatment. */
+.timeline-item.experience-card.timeline-item-compact {
+  padding: 0.8rem 1.15rem;
+  row-gap: 0.45rem;
+  background: transparent;
+  border-color: rgba(74, 98, 70, 0.12);
+  border-radius: 0.75rem;
+}
+.experience-card.timeline-item-compact .timeline-body h3 {
+  font-size: 0.96rem;
+  font-weight: 550;
+  margin-bottom: 0.15rem;
+}
+.experience-card.timeline-item-compact .timeline-date { font-size: 0.76rem; font-weight: 500; }
+.experience-card.timeline-item-compact .timeline-org { font-size: 0.8rem; }
+.experience-card.timeline-item-compact .timeline-title-row > span { font-size: 0.68rem; }
+.experience-card.timeline-item-compact .experience-description { font-size: 0.82rem; line-height: 1.5; }
+.experience-card.timeline-item-compact .timeline-skills { gap: 0.2rem 0.6rem; }
+.experience-card.timeline-item-compact .tag {
+  border: 1px solid rgba(74, 98, 70, 0.18);
+  background: rgba(54, 91, 69, 0.055);
+  border-radius: 999px;
+  padding: 0.2rem 0.4rem;
+  color: var(--muted);
+  font-size: 0.63rem;
+  line-height: 1.3;
+}
+
+.experience-card.timeline-item-compact::before {
+  width: 0.6rem;
+  height: 0.6rem;
+  top: 1.15rem;
+  background: #899582;
+  box-shadow: 0 0 0 3px #e6eadf;
+}
+
+
+/* Share title, description, and footer tracks across each project row. */
+.project-card-header { min-height: 2.4em; }
+@supports (grid-template-rows: subgrid) {
+  .project-card {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+    row-gap: 0.7rem;
+  }
+  .project-card-main { display: contents; }
+  .project-card-header { min-height: 0; margin-bottom: 0; align-self: start; }
+  .project-card-main > p { align-self: start; }
+  .project-card-footer { align-self: end; margin-top: 0.7rem; }
+}
+@media (max-width: 780px) {
+  .project-card-header { min-height: 0; }
 }

@@ -87,11 +87,11 @@ export function Hero() {
 
           <div className="compact-profile">
             <p>
-              Research Assistant validating RADAR-based UAV tracking simulations.
+              Working on Simulink–ROS 2 integration at McMaster EcoCAR.
             </p>
 
             <div className="focus-stack" aria-label="Technical focus">
-              {["Embedded", "UAVs", "Signal Processing", "Firmware"].map((item) => (
+              {["Autonomy", "Embedded", "UAVs", "Simulations"].map((item) => (
                 <span key={item}>{item}</span>
               ))}
             </div>
