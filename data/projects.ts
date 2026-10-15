@@ -32,7 +32,7 @@ export const projects: Project[] = [
       "ArduPilot",
       "MAVLink",
       "NVIDIA Jetson",
-      "TensorRT"
+      "PyTorch"
     ],
     "highlights": [
       "Designed the platform around a 10-inch frame, 6S battery system, and high-torque motor/propeller combination.",
@@ -117,8 +117,7 @@ export const projects: Project[] = [
     "tags": [
       "Next.js",
       "Supabase",
-      "PostgreSQL",
-      "RBAC"
+      "PostgreSQL"
     ],
     "highlights": [
       "Created sections for CODM, R6M, and Valorant Mobile coverage.",
@@ -145,8 +144,7 @@ export const projects: Project[] = [
     "tags": [
       "Digital Logic",
       "74-Series ICs",
-      "C++",
-      "Hardware Verification"
+      "C++"
     ],
     "highlights": [
       "Implemented addition, subtraction, AND, OR, and XOR style operation paths.",
