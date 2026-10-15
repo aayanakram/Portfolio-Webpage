@@ -40,8 +40,7 @@ export const experiences: Experience[] = [
     "tags": [
       "MATLAB",
       "Radar",
-      "Kalman Filtering",
-      "Machine Learning"
+      "Kalman Filtering"
     ]
   },
   {
@@ -55,8 +54,7 @@ export const experiences: Experience[] = [
     "tags": [
       "ESP32-S3",
       "C++",
-      "Firmware",
-      "GPIO"
+      "Firmware"
     ]
   },
   {
@@ -69,8 +67,7 @@ export const experiences: Experience[] = [
     "tags": [
       "NVIDIA Jetson",
       "YOLO",
-      "PyTorch",
-      "OpenCV"
+      "PyTorch"
     ]
   },
   {
@@ -96,7 +93,6 @@ export const experiences: Experience[] = [
     "compact": true,
     "tags": [
       "Accelerator Physics",
-      "Molflow",
       "Opera2D"
     ],
     "description": "Ultra-high-vacuum systems for the LHC, accelerator maintenance, and electromagnetic simulation."
@@ -110,8 +106,7 @@ export const experiences: Experience[] = [
     "compact": true,
     "tags": [
       "ARM Cortex-M4",
-      "Embedded C",
-      "Telemetry"
+      "Embedded C"
     ],
     "description": "Embedded systems, telemetry, RF communication, and collision-warning concepts for satellite systems."
   },
@@ -124,8 +119,7 @@ export const experiences: Experience[] = [
     "compact": true,
     "tags": [
       "Digital Twins",
-      "Siemens Simcenter",
-      "Simulation"
+      "Siemens Simcenter"
     ],
     "description": "Electromechanical simulations and digital-twin concepts using Siemens Simcenter."
   }
