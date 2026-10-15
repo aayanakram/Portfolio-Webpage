@@ -78,11 +78,10 @@ export const experiences: Experience[] = [
     "location": "Liverpool, United Kingdom",
     "compact": true,
     "tags": [
-      "Manufacturing",
-      "Sustainability",
-      "Research"
+      "Automation",
+      "Sustainability"
     ],
-    "description": "Research into manufacturing automation, energy efficiency, and waste reduction."
+    "description": "Researched automation and robotics at NGF Europe to reduce manufacturing emissions and improve sustainability."
   },
   {
     "role": "Accelerator Physics Intern",
