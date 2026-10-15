@@ -31,15 +31,12 @@ export const experiences: Experience[] = [
   },
   {
     "role": "Student Researcher - UAV Tracking & Machine Learning",
+    "compact": true,
     "organisation": "ETF Lab · Faculty of Engineering, McMaster University",
     "organisationUrl": "https://www.eng.mcmaster.ca/",
     "date": "May 2026 — October 2026",
     "location": "Hamilton, Ontario, Canada",
-    "bullets": [
-      "Reconstructed 3D UAV trajectories from simulated radar detections in MATLAB.",
-      "Compared constant-velocity and constant-acceleration Kalman filters.",
-      "Used motion features and a random forest to classify seven UAV manoeuvres."
-    ],
+    "description": "Research in the Estimation, Tracking, & Fusion Lab on radar-based UAV tracking, state estimation, and machine learning for motion classification.",
     "tags": [
       "MATLAB",
       "Radar",
@@ -49,14 +46,12 @@ export const experiences: Experience[] = [
   },
   {
     "role": "Embedded Systems & IoT Developer",
+    "compact": true,
     "organisation": "Kaizen Radical",
     "organisationUrl": "https://kaizenradical.com/?lang=en",
     "date": "July 2026 — September 2026",
     "location": "Quebec, Canada",
-    "bullets": [
-      "Built C++ firmware for ESP32-S3 visual-management stations and physical I/O.",
-      "Added Wi-Fi/MQTT communication and connection handling for Odoo integration."
-    ],
+    "description": "Firmware and system architecture for modular IoT-connected visual management stations.",
     "tags": [
       "ESP32-S3",
       "C++",
@@ -66,13 +61,11 @@ export const experiences: Experience[] = [
   },
   {
     "role": "Embedded Computer Vision Intern",
+    "compact": true,
     "organisation": "Confidential Startup",
     "date": "April 2026 — July 2026",
     "location": "Arlington, Virginia, USA",
-    "bullets": [
-      "Deployed YOLO object detection on NVIDIA Jetson using PyTorch and OpenCV.",
-      "Built Roboflow datasets and adapted model training and deployment for embedded hardware."
-    ],
+    "description": "Embedded computer vision for mobile object-detection platforms and edge AI deployment.",
     "tags": [
       "NVIDIA Jetson",
       "YOLO",
