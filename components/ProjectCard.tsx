@@ -2,14 +2,20 @@ import type { Project } from "@/data/projects";
 
 type ProjectCardProps = {
   project: Project;
+  onOpen: (trigger: HTMLButtonElement) => void;
 };
 
-export function ProjectCard({ project }: ProjectCardProps) {
+export function ProjectCard({ project, onOpen }: ProjectCardProps) {
   return (
     <article className="project-card">
       <div className="project-card-main">
         <div className="project-card-header">
-          <h3>{project.title}</h3>
+          <h3>
+            {/* The button's hit area is stretched over the whole card in CSS. */}
+            <button type="button" className="project-card-open" aria-haspopup="dialog" onClick={(event) => onOpen(event.currentTarget)}>
+              {project.title}
+            </button>
+          </h3>
 
           {(project.githubUrl || project.liveUrl) && (
             <div className="project-card-links">
@@ -55,6 +61,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
 
         <p>{project.summary}</p>
+        <span className="project-card-more" aria-hidden="true">
+          Read more <span>→</span>
+        </span>
       </div>
 
       <div className="project-card-footer">
