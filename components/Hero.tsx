@@ -1,32 +1,36 @@
 import Link from "next/link";
 import { site } from "@/data/site";
+import { CopyEmail } from "./CopyEmail";
+import { DotField } from "./DotField";
 import { ScrollReveal } from "./ScrollReveal";
 
 export function Hero() {
   return (
     <section className="hero" id="home">
+      <DotField />
       <div className="hero-grid">
         <ScrollReveal className="hero-copy">
-          <p className="eyebrow">{site.title}</p>
+          <p className="eyebrow hero-enter">{site.title}</p>
           <h1 className="hero-title">
-            Hi, I&apos;m <span>Aayan Akram</span>
+            <span className="hero-line">
+              <span>Hi, I&apos;m</span>
+            </span>{" "}
+            <span className="hero-line hero-name">
+              <span>Aayan Akram</span>
+            </span>
           </h1>
 
-          <p className="hero-summary">
+          <p className="hero-summary hero-enter">
             I build systems where software meets hardware.
           </p>
 
-          <div className="hero-actions">
+          <div className="hero-actions hero-enter">
             <Link href="/#projects" className="button button-primary">
               Explore My Projects
             </Link>
 
             <div className="hero-socials" aria-label="Social links">
-              <a
-                className="icon-button email-icon-button"
-                href={`mailto:${site.email}`}
-                aria-label="Email"
-              >
+              <CopyEmail className="icon-button email-icon-button">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path
                     fill="none"
@@ -45,7 +49,7 @@ export function Hero() {
                     d="m4 7 8 6 8-6"
                   />
                 </svg>
-              </a>
+              </CopyEmail>
 
               <a
                 className="icon-button"

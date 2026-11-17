@@ -1,9 +1,10 @@
 import { experiences, type Experience } from "@/data/experience";
+import { ScrollReveal } from "./ScrollReveal";
 import { SectionHeader } from "./SectionHeader";
 
-function ExperienceRow({ item, initiallyOpen = false }: { item: Experience; initiallyOpen?: boolean }) {
+function ExperienceRow({ item }: { item: Experience }) {
   return (
-    <details className="experience-row" name="experience-roles" open={initiallyOpen}>
+    <details className="experience-row" name="experience-roles">
       <summary className="experience-row-summary">
         <span className="experience-row-date">{item.date}</span>
         <span className="experience-row-heading">
@@ -36,9 +37,9 @@ export function ExperienceTimeline() {
   return (
     <section className="section" id="experience">
       <SectionHeader eyebrow="Experience" title="Where I've been:" />
-      <div className="experience-list">
-        {recent.map((item, index) => <ExperienceRow key={`${item.role}-${item.organisation}`} item={item} initiallyOpen={index === 0} />)}
-      </div>
+      <ScrollReveal className="experience-list">
+        {recent.map(item => <ExperienceRow key={`${item.role}-${item.organisation}`} item={item} />)}
+      </ScrollReveal>
       {earlier.length > 0 && <details className="earlier-experience">
         <summary><span>Earlier experience <span className="earlier-experience-count">{earlier.length} placements · 2024</span></span><span className="experience-row-toggle" aria-hidden="true" /></summary>
         <div className="experience-list">
