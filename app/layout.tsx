@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   ],
 };
 
-/* Runs before the first paint so the page never flashes the wrong theme. */
-const themeScript = `try{var t=localStorage.getItem("theme");if(t!=="light"&&t!=="dark")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=t}catch(e){}`;
+/* Runs before the first paint so the page never flashes the wrong theme. Light is the default; dark is used only after the visitor picks it. */
+const themeScript = `try{var t=localStorage.getItem("theme");if(t!=="light"&&t!=="dark")t="light";document.documentElement.dataset.theme=t}catch(e){}`;
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
